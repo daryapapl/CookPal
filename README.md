@@ -1,1 +1,1 @@
-# cis5800
+# CookPal cooking notes web app
