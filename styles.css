@@ -73,14 +73,14 @@ nav {
 
 
 /*Css for sign out button*/
-#signOutB{
+#signInB{
     margin:20px 15px;
     padding:10px 25px;
     background-color:transparent;
     border:thin black solid;
     font-size:15px;
    }
-#signOutB:hover{
+#signInB:hover{
 	background-color:#CC6600;
 }
 
