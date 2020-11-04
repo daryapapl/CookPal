@@ -24,15 +24,16 @@ nav {
 }
 .cSidebar a {
 	color: white;
-	padding: 8px 8px 8px 8px;
-	margin-bottom:20px;
+	padding: 8px 8px 8px 30px;
+	margin-bottom:10px;
 	text-decoration: none;
 	font-size: 30px;
 	transition: 0.3s;
-	text-align:center;
+	text-align:left;
 	display: block;
 
 }
+
 .openButton {
 	padding: 22px 35px;
 	background-color: transparent;
@@ -57,30 +58,50 @@ nav {
 .openButton:active {
 	background-color:#CC6600;
 }
+/*ADDED - CSS for sidebar recipe options. Just made them smaller and more indented than the rest of the options on the sidebar */
+#recipeOpt a{
+	font-size:25px;
+	padding:13px 8px 13px 60px;
+}
 
-/*CSS for Title*/
-#navRest {
+
+/*CSS for Title with pages that have just a sign out button*/
+#pageTitle1B  {
 	transition: margin-left 0.5s;
 	width:100%;
 	padding:15px;
-}
-
-#pageTitle {
 	color: black;
 	text-align: center;
 	font-size: 25px;
+	margin-left:7%;
+
+	
+}
+/*CSS for Title with pages that have a sign in and sign up button*/
+/*Had to seperate the two titles in order to have both of them centered at the correct spots*/
+
+#pageTitle2B  {
+	transition: margin-left 0.5s;
+	width:100%;
+	padding:15px;
+	color: black;
+	text-align: center;
+	font-size: 25px;
+	margin-left:15%;
+	
 }
 
 
-/*Css for sign out button*/
-#signInB{
+
+/*Css for buttons*/
+#navButton{
     margin:20px 15px;
     padding:10px 25px;
     background-color:transparent;
     border:thin black solid;
     font-size:15px;
    }
-#signInB:hover{
+#navButton:hover{
 	background-color:#CC6600;
 }
 
