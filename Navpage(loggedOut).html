@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<!doctype html>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<link href="styles.css" rel="stylesheet" />
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+<title>CookPal</title>
+</head>
+
+<body>
+<!--Recent update-->
+<!-- this navigation is for pages that are not logged in to their account on CookPal. The sidebar just shows about, news, and support-->
+<!--Now has a sign up and sign in button-->
+<!--Recent update-->
+
+<!--Nav contains collapsible sidebar with hamburger menu, title, and sign in and sign up button (if user is signed in)-->
+<nav>
+	<div id="sidebar" class="cSidebar">
+	    <button class="openButton" onclick="openNav()">☰</button>
+		<a href="#">About&nbsp;us</a> 
+		<a href="#">News</a> 
+		<a href="#">Support</a>
+	</div>
+	<div id="navbutton">
+		<button class="openButton" onclick="openNav()">☰</button></div>
+        <h2 id="pageTitle2B">CookPal</h2>
+	<div>
+	<button id="navButton">Sign&nbsp;up</button> 
+	</div>
+	<div>
+	<button id="navButton">Sign&nbsp;in</button>
+	</div>
+</nav>
+<main>
+<!-- Page content goes here-->
+
+
+
+</main>
+
+
+
+<!--Footer, still unsure what to put in-->
+<footer>
+@CookPal 2020
+</footer>
+
+
+
+
+<!--Script used for sidebar-->
+<script>
+function openNav() {
+var e = document.getElementById("sidebar");
+if (e.style.width == '260px')
+{e.style.width = '0px';}
+else
+{e.style.width='260px';}
+}
+function closeNav()
+{document.getElementById("sidebar").style.width="0";}
+</script>
+
+</body>
+
+</html>
