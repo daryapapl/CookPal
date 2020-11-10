@@ -1,0 +1,171 @@
+﻿/*General CSS*/
+
+body {
+	background-color: #FFCC66;
+	margin: 0;
+	padding: 0;
+}
+body,html{
+	height: 100%;
+}
+nav {
+	display: flex;
+	height: 90px;
+
+}
+
+/*Css for collapsible sidebar part of the Navigation Bar*/
+.cSidebar {
+	height: 100%;
+	width: 0;
+	left: 0;
+	background-color: #FF9933;
+	position: fixed;
+	overflow-x: hidden;
+	padding-top: 0px;
+	z-index: 1;
+	transition: 0.5s;
+	border-right:thin black ridge;
+
+}
+.cSidebar a {
+	color: white;
+	padding: 8px 8px 8px 30px;
+	margin-bottom:10px;
+	text-decoration: none;
+	font-size: 30px;
+	transition: 0.3s;
+	text-align:left;
+	display: block;
+
+}
+
+.openButton {
+	padding: 22px 35px;
+	color: black;
+	font-size: 30px;
+	border: none;
+	outline: none;
+	transition:0.3s;
+	border-radius:1rem;
+	background-color:transparent;
+	border:thin black solid;
+
+}
+
+#sidebar a:hover {
+	background-color: #CC6600;	
+	cursor: pointer;
+
+}
+.openButton:hover {
+		cursor: pointer;
+		background-color:#CC6600;
+
+}
+
+.openButton:active {
+	
+}
+CSS for sidebar recipe options. Just made them smaller and more indented than the rest of the options on the sidebar */
+#recipeOpt a{
+	font-size:25px;
+	padding:13px 8px 13px 60px;
+}
+
+
+/*CSS for Title with pages that have just a sign out button*/
+#pageTitle1B  {
+	transition: margin-left 0.5s;
+	width:100%;
+	padding:15px;
+	color: black;
+	text-align: center;
+	font-size: 25px;
+	margin-left:7%;
+
+	
+}
+/*CSS for Title with pages that have a sign in and sign up button*/
+/*Had to seperate the two titles in order to have both of them centered at the correct spots*/
+
+#pageTitle2B  {
+	transition: margin-left 0.5s;
+	width:100%;
+	padding:15px;
+	color: black;
+	text-align: center;
+	font-size: 25px;
+	margin-left:15%;
+	
+}
+
+
+
+/*Css for buttons*/
+#navButton{
+    margin:20px 15px;
+    padding:10px 25px;
+    background-color:transparent;
+    border:thin black solid;
+    font-size:15px;
+   }
+#navButton:hover{
+	background-color:#CC6600;
+}
+
+/*CSS for Sign in Page*/
+#signInForm{
+    width:350px;
+	margin:4% auto;
+	padding:15px;
+	background-color:#FF9933;
+	border-radius:1rem;
+	border:thin black ridge;
+}
+
+#signInFormHeader{
+	text-align:center;
+	margin-bottom:20px;
+}
+#formButton{
+	margin:10px 0;;
+    padding:10px 25px;
+    background-color:transparent;
+    border:thin black solid;
+    font-size:15px;
+    color:black;
+}
+#formButton:hover{
+	background-color: #CC6600;	
+	cursor: pointer
+}
+#formLogo{
+	width:89.25px;
+	height:100%;
+}
+
+a{
+	color:#FF3300
+}
+a:hover{
+	color:#993300
+}
+
+#signInBackground{
+	background-image:url('pastaBackground.jpg');
+	background-size:cover;
+}
+
+
+/*CSS of footer*/
+
+footer{
+	width:100%;
+	height:15px;
+	position:fixed;
+	background-color:#FF9933;
+	font-size:10px;
+	text-align:center;
+	bottom:0;
+}
