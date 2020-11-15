@@ -45,6 +45,14 @@ public class Main {
         get("/categories", (req, res) -> {
             return new ModelAndView(null, "/categories.hbs");
         }, new HandlebarsTemplateEngine());
+        get("/recipe", (req, res) -> {
+            return new ModelAndView(null, "/recipe.hbs");
+        }, new HandlebarsTemplateEngine());
+        get("/new-recipe", (req, res) -> {
+            return new ModelAndView(null, "/new-recipe.hbs");
+        }, new HandlebarsTemplateEngine());
+
+
 
         get("/weekly-plan", (req, res) -> {
             return new ModelAndView(null, "/weeklyPlan.hbs");

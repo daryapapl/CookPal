@@ -1,0 +1,117 @@
+{{#partial "main"}}
+<main>
+    <!--New Recipe Form-->
+    <!--To complete this, I sperated the form into 2 divs: box1 (box on top that spans the width of the form) and box 2 (the rest of the form)-->
+    <!--Box 1 contains the form title, enter recipe name input, favorite checkbox, category select input, and the submit and cancel buttons-->
+    <!--Box 2 contains two divs: box 3 (div to the right) and box 4 (div to the left)-->
+    <!--Box 3 contains upload image option, cooking time input, number of serving input, and ingredients input-->
+    <!--Box 4 contains Instructions input-->
+
+    <form id="newRecipeFormArea">
+
+        <!--BOX 1-->
+        <div class="box1">
+
+            <h4 id="formTitle">Recipe Creation Form</h4>
+
+            <div class="nameArea">
+                <label for="inputRecipeName">Enter Name of Recipe</label><br/>
+                <input type="text" id="inputRecipeName" name="RecipeName" required/>
+            </div>
+
+            <div class="nameArea">
+                <label for="checkFav"> Favorite</label>
+                <input type="checkbox" id="checkFav" name="favorite" value="Favorite"/>
+            </div>
+
+            <div class="categoryArea">
+                <label for="inputCategory">Select Category</label><br/>
+                <select id="inputCategory" name="Category" required>
+                    <option disabled hidden selected value="" style="display:none"></option>
+                    <option value="Meats">Meats</option>
+                    <option value="Soups">Soups</option>
+                    <option value="Salads">Salads</option>
+                    <option value="Pastas">Pastas</option>
+                    <option value="Desserts">Desserts</option>
+                    <option value="Breakfast">Breakfast</option>
+                    <option value="Vegan">Vegan</option>
+                </select>
+            </div>
+
+
+            <input class="recipeButton" type="submit"/>
+            <input class="recipeButton"type="button" value="Cancel"/>
+
+
+        </div>
+        <!--END OF BOX 1-->
+
+        <!--BOX 2-->
+        <div class="box2">
+
+            <!--BOX 3-->
+            <div class="box3">
+
+                <div class="bigBox">
+                    <div id="sectionUpload">
+                        <label for="imageUpload">Upload image:</label>
+                        <input type="file" id="imageUpload" name="img" accept="image/*"/>
+                    </div>
+                </div>
+
+
+                <div class="littleBox">
+                    <div id="sectionUpload">
+                        <label for="cTime">Cooking Time Required:</label>
+                        <input type="text" id="cTime" name="CookingTime" required/>
+                    </div>
+                </div>
+
+
+                <div class="littleBox">
+                    <div id="sectionUpload">
+                        <label for="numServings">Number of Servings:</label>
+                        <input type="text" id="numServings" name="servingNumber" required/>
+                    </div>
+                </div>
+
+                <div class="littleBox">
+                    <div id="sectionUpload">
+                        <label for="numServings">Calories per Serving:</label>
+                        <input type="text" id="numServings" name="calories" required/>
+                    </div>
+                </div>
+
+
+                <div class="bigBoxBottom">
+                    <div id="sectionUploadBottom">
+                        <label for="rIngredients">Ingredients:</label>
+                        <textarea id="rIngredients" name="ingredients" rows="5" cols="25" required>
+Eggs,lemon,salt...
+    </textarea>
+                    </div>
+                </div>
+
+            </div>
+            <!--END OF BOX 3-->
+
+            <!--BOX 4-->
+            <div class="box4">
+                <div class="bigBoxRight">
+                    <label for="rInstructions">Instructions</label>
+                    <textarea id="rInstructions" name="instructions" rows="24" cols="150" required>
+
+    </textarea>
+
+                </div>
+            </div>
+            <!--END OF BOX 4-->
+
+        </div>
+        <!--END OF BOX 2-->
+
+    </form>
+</main>
+{{/partial}}
+
+{{> base.hbs}}
