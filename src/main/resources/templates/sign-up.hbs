@@ -1,0 +1,61 @@
+{{#partial "title"}}CookPal Sign Up{{/partial}}
+
+{{#partial "nav"}}
+    <nav>
+        <div id="sidebar" class="cSidebar">
+            <button class="openButton" onclick="openNav()">☰</button>
+            <a href="#">About&nbsp;us</a>
+            <a href="#">News</a>
+            <a href="#">Support</a>
+        </div>
+        <div id="navbutton">
+            <button class="openButton" onclick="openNav()">☰</button>
+        </div>
+        <div id="logo">
+            <a href="/">
+                <img src="images/logo.png" alt="">
+                <p id="pageTitle2B">CookPal</p>
+            </a>
+        </div>
+        <div id="navButton">
+            <a href="/sign-in" class="btn btn-primary">Sign&nbsp;In</a>
+        </div>
+    </nav>
+{{/partial}}
+
+<!--added id to body tag so that I could add background image to specific sign in page-->
+{{#partial "id"}}signInBackground{{/partial}}
+
+{{#partial "main"}}
+<!--Sign up form using bootstrap-->
+<main>
+    <form id="signUpForm" action="/sign-up-form" method="post">
+      <div id="signUpFormHeader">
+      <h4>CookPal</h4>
+      <img src="images/logo.png" alt="cookpalLogo" id="formLogo"/>
+      <h2>Sign Up</h2>
+      <h6>to create your account</h6>
+      </div>
+        <div class="form-group">
+        <label for="UserName">User name</label>
+        <input type="text" name="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="enter your username" required>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="enter your email" required>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="enter your password" required>
+      </div>
+       <div class="form-group">
+        <label for="exampleInputPassword1">Repeat Password</label>
+        <input type="password" name="passwordConfirm" class="form-control" id="exampleInputPassword1" placeholder="enter your password again" required>
+      </div>
+      <input type="submit" id="formButton" class="btn btn-primary" value="Create Account">
+      <p>Already have an account? Sign in <a href="#">now</a></p>
+    </form>
+</main>
+{{/partial}}
+
+{{> base.hbs}}

@@ -1,0 +1,13 @@
+target
+project/*.lock
+**/.DS_Store
+logs/
+
+
+#Intellij
+*.iml
+*.ipr
+*.iws
+.idea
+.idea_modules/
+out/

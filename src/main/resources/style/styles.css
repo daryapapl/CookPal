@@ -1,0 +1,541 @@
+﻿/*General CSS*/
+
+body {
+	background-color:#fff7e6;
+	margin: 0;
+	padding: 0;
+}
+body,html{
+	height: 100%;
+}
+nav {
+	display: flex;
+	height: 90px;
+
+}
+
+/*Css for collapsible sidebar part of the Navigation Bar*/
+.cSidebar {
+	height: 100%;
+	width: 0;
+	left: 0;
+	background-color: #FF9933;
+	position: fixed;
+	overflow-x: hidden;
+	padding-top: 0px;
+	z-index: 1;
+	transition: 0.5s;
+	border-right:thin black ridge;
+
+}
+.cSidebar a {
+	color: white;
+	padding: 8px 8px 8px 30px;
+	margin-bottom:10px;
+	text-decoration: none;
+	font-size: 30px;
+	transition: 0.3s;
+	text-align:left;
+	display: block;
+
+}
+
+.openButton {
+	padding: 22px 35px;
+	color: black;
+	font-size: 30px;
+	border: none;
+	outline: none;
+	transition:0.3s;
+	border-radius:1rem;
+	background-color:transparent;
+
+}
+
+#sidebar a:hover {
+	background-color: #CC6600;
+	cursor: pointer;
+
+}
+.openButton:hover {
+	cursor: pointer;
+	background-color:#CC6600;
+
+}
+
+.openButton:active {
+
+}
+/*CSS for sidebar recipe options. Just made them smaller and more indented than the rest of the options on the sidebar */
+#recipeOpt a{
+	font-size:25px;
+	padding:13px 8px 13px 60px;
+}
+
+
+/*CSS for Title with pages that have just a sign out button*/
+#pageTitle1B  {
+	transition: margin-left 0.5s;
+	width:100%;
+	padding:15px;
+	color: black;
+	text-align: center;
+	font-size: 25px;
+	margin-left:7%;
+}
+
+/*CSS for Title with pages that have a sign in and sign up button*/
+/*Had to seperate the two titles in order to have both of them centered at the correct spots*/
+
+#logo{
+	padding: 10px;
+}
+
+#logo img {
+	width: 90px;
+	height: 95px;
+}
+
+#logo a {
+	font-size: 30px;
+	text-decoration: none;
+	color: black;
+	margin-top: 10px;
+}
+
+#logo a p{
+	display: inline-block;
+}
+
+#logo a p:hover{
+	text-decoration: none;
+	color:#FF9933;
+}
+
+/*Css for buttons*/
+#navButton{
+	position: absolute;
+	right: 15px;
+	margin:20px 15px;
+}
+
+#navButton a{
+	 padding:10px 30px;
+	 background-color:transparent;
+	 border:thin black solid;
+	 font-size:15px;
+	 color: black;
+ }
+
+#navButton a:hover{
+	background-color:#CC6600;
+}
+
+/*CSS for Sign in & Sign up Pages*/
+#signUpForm{
+	position: absolute;
+	top: 2em;
+	width: 30%;
+	height: 90%;
+	left: 35%;
+	padding:15px;
+	background-color:#FF9933;
+	border-radius:1rem;
+}
+
+#signInForm{
+	position: absolute;
+	margin: auto;
+	width: 30%;
+	height: 70%;
+	left: 35%;
+	padding:15px;
+	background-color:#FF9933;
+	border-radius:1rem;
+}
+
+
+
+#signUpFormHeader{
+	text-align:center;
+	margin-bottom:20px;
+}
+
+#signInFormHeader{
+	text-align:center;
+	margin-bottom:20px;
+}
+#formButton{
+	margin:10px 0;;
+	padding:10px 25px;
+	background-color:transparent;
+	border:thin black solid;
+	font-size:15px;
+	color:black;
+}
+#formButton:hover{
+	background-color: #CC6600;
+	cursor: pointer
+}
+#formLogo{
+	width:89.25px;
+	height:100%;
+}
+
+a{
+	color:#FF3300
+}
+a:hover{
+	color:#993300
+}
+
+#signInBackground{
+	background-image:url('pastaBackground.jpg');
+	background-size:cover;
+}
+/*CSS for new recipe form page*/
+
+.box1{
+	width:55%;
+	height:115px;
+	background-color:red;
+	margin:0 auto;
+	margin-top:10px;
+	display:flex;
+	background-color:#FFCC66;
+	border-radius: 1rem 1rem 0 0;
+	border-top:thin black solid;
+	border-right:thin black solid;
+	border-left:thin black solid;
+	min-width:900px;
+
+}
+.box2{
+	display:flex;
+	width:55%;
+	height:625px;
+	background-color:#FFCC66;
+	margin:0 auto;
+	border-radius: 0 0 1rem 1rem;
+	border-bottom:thin black solid;
+	border-left:thin black solid;
+	border-right:thin black solid;
+	min-width:900px;
+
+
+}
+.box3{
+	width:25%;
+}
+.box4{
+	width:75%;
+	display:flex;
+	margin:0;
+	/*justify-content:center;*/
+
+}
+.bigBox{
+	width:100%;
+	height:17%;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	overflow:hidden;
+
+}
+.bigBoxBottom{
+	width:100%;
+	height:30%;
+	display:flex;
+	justify-content:center;
+
+
+}
+
+.littleBox{
+	width:100%;
+	height:17%;
+	display:flex;
+	justify-content:center;
+
+}
+.categoryArea{
+	margin:auto;
+	font-size:large;
+	padding:0 15px;
+
+}
+.nameArea{
+	margin: auto;
+	font-size:large;
+	padding:0 20px;
+	text-align:center;
+
+}
+.rButtons{
+	margin:auto;
+	padding:10px 25px;
+
+}
+.recipeButton{
+	margin:auto 1%;
+	background-color:transparent;
+	padding:10px 25px;
+
+	border:thin black solid;
+	font-size:large;
+
+}
+#inputRecipeName{
+	height:25px;
+	width:100%;
+	font-size: 20px;
+
+}
+#cTime, #numServings, #rInstructions{
+	font-size:15px;
+}
+
+#inputCategory {
+	font:inherit;
+	font-size: 25px;
+}
+
+#formTitle{
+	padding: 5px 30px;
+	margin:auto 3%;
+	text-align:center;
+	border:thin black solid;
+	background-color:#fff7e6;
+	border-radius:1rem;
+
+}
+#sectionUpload, #sectionUploadBottom{
+	width: 70%;
+	height: 80px;
+	margin: 10px;
+	padding:5px;
+	font-size:large;
+}
+#sectionUploadBottom{
+	height:80%;
+}
+#cTime, #numServings, #rIngredients{
+	width:100%;
+
+}
+#rIngredients{
+	height:100px;
+}
+.bigBoxRight{
+	width: 93%;
+	height: 70%;
+	margin: 10px;
+	padding:5px;
+	font-size:large;
+}
+#rInstructions{
+	width:100%;
+}
+.recipeButton:hover{
+	cursor: pointer;
+	background-color:#CC6600;
+
+}
+
+
+/*CSS Weekly Plan*/
+.weeklyPlan{
+	top: 3em;
+	position: relative;
+	width: 70%;
+	margin: auto;
+	border-style: solid;
+	border-width: thin;
+	border-radius: 5px;
+	height: 30em;
+	background-color: white;
+}
+
+.weeklyPlan ul{
+	position: relative;
+	left: 10em;
+	padding-top: 1em;
+}
+
+.weeklyPlan a{
+	width: 7em;
+	text-align: center;
+}
+
+.day p{
+	padding: 3em;
+}
+
+.day div img{
+	position: relative;
+	top: 2em;
+	width: 100px;
+	height: 70px;
+
+}
+
+/* CSS Categories page */
+
+.addNewCategoryForm{
+	margin: 5% 0 0 20%;
+}
+
+.inputAddNewCategory{
+	position: relative;
+	top: 0.2em;
+	margin-left: 1em;
+	visibility: hidden;
+}
+.visibleInputAddNewCategory{
+	visibility: visible;
+}
+
+.dropdownRecipes{
+	position: relative;
+	top: 2.5em;
+	margin-right: 2em;
+}
+
+.categoriesList{
+	width: 60%;
+	margin: 2em auto;
+}
+.categoriesList a{
+	color: black;
+}
+.categoriesList a:hover{
+	color:#FF9933;
+	text-decoration: none;
+}
+
+.categoriesList span{
+	background-color: #FF9933;
+}
+
+.categoryDetailsButtons{
+	padding: 0 2em;
+	position: relative;
+}
+
+.categoryDetails{
+	margin: 0.5em;
+	padding: 0 2em;
+	position: relative;
+	left: 19em;
+}
+.shiftCategoryDetails{
+	left: 5em;
+}
+
+.inputRenameCategory{
+	width: 14em;
+	visibility: hidden;
+}
+.visibleInputRenameCategory{
+	visibility: visible;
+}
+
+
+.renameCategoryForm{
+	position: relative;
+	top: 0.3em;
+}
+
+/* CSS Category page and Index page */
+
+.allRecipes{
+	width: 70%;
+	margin: 5% auto;
+}
+
+.allRecipes img{
+	width: 200px;
+	height: 150px;
+}
+
+/*CSS for recipe page*/
+
+#editB{
+	height: 50px;
+	width: 200px;
+	margin:20px 15px;
+	padding:10px 25px;
+	background-color:transparent;
+	border:thin black solid;
+	font-size:15px;
+	cursor: pointer;
+}
+
+#editB:hover{
+	background-color:#CC6600;
+}
+
+#shareB{
+	height: 50px;
+	width: 200px;
+	margin:20px 15px;
+	padding:10px 25px;
+	background-color:transparent;
+	border:thin black solid;
+	font-size:15px;
+	cursor: pointer;
+}
+
+#shareB:hover{
+	background-color:#CC6600;
+}
+
+
+
+#nutritionC{
+	height: 10px;
+	width: 50%;
+	text-align: left;
+}
+
+#timeC{
+	height: 7px;
+	/*	width: 55%;   */
+}
+
+
+#ingredientC{
+	height: 230px;
+	/*	width: 55%;   */
+	text-align: left;
+
+}
+
+#instructionsC{
+	width: 75%;
+	text-align: left;
+
+}
+
+.recipeT tbody tr td{
+	padding: 10px;
+	text-align: center;
+}
+
+
+
+/*CSS of footer*/
+
+footer{
+	width:100%;
+	height:15px;
+	position:fixed;
+	background-color:#FF9933;
+	font-size:10px;
+	text-align:center;
+	bottom:0;
+}
+
+
+
