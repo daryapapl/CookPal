@@ -1,0 +1,66 @@
+﻿
+{{#partial "title"}}CookPal Sign In{{/partial}}
+{{#partial "nav"}}
+    <nav>
+        <div id="sidebar" class="cSidebar">
+            <button class="openButton" onclick="openNav()">☰</button>
+            <a href="#">About&nbsp;us</a>
+            <a href="#">News</a>
+            <a href="#">Support</a>
+        </div>
+        <div id="navbutton">
+            <button class="openButton" onclick="openNav()">☰</button>
+        </div>
+        <div id="logo">
+            <a href="/">
+                <img src="/images/logo.png" alt="">
+                <p id="pageTitle2B">CookPal</p>
+            </a>
+        </div>
+
+<!--        <h2 id="pageTitle2B">CookPal</h2>-->
+
+        <div id="navButton">
+            <a href="/sign-up" class="btn btn-primary">Sign&nbsp;Up</a>
+        </div>
+    </nav>
+{{/partial}}
+<!--added id to body tag so that I could add background image to specific sign in page-->
+{{#partial "id"}}signInBackground{{/partial}}
+
+
+{{#partial "main"}}
+<!--Sign in form using bootstrap-->
+
+<form id="signInForm" action="/sign-in-form" method="post">
+    <div id="signInFormHeader">
+        <h4>CookPal</h4>
+        <img src="/images/logo.png" alt="cookpalLogo" id="formLogo"/>
+        <h2>Sign In</h2>
+        <h6>to access your account</h6>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Please enter your email" required>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        {{#if incorrectPassword}}
+            <p>You've entered the wrong password. Please try again.</p>
+        {{/if}}
+        <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Please enter your password" required>
+    </div>
+    <input type="submit" id="formButton" class="btn btn-primary" value="Sign In">
+    <p>Don't have an account? Sign up <a href="/sign-up">now</a></p>
+
+
+
+</form>
+{{/partial}}
+
+
+{{> base.hbs}}
+
+
+
+
