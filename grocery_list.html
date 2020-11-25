@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<!doctype html>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+<link href="styles.css" rel="stylesheet" />
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+
+<title>Grocery list</title>
+
+<script>
+		function addRow(tableID) {
+
+			var table = document.getElementById(tableID);
+
+			var rowCount = table.rows.length;
+			var row = table.insertRow(rowCount);
+
+			var cell1 = row.insertCell(0);
+			var element1 = document.createElement("input");
+			element1.type = "checkbox";
+			element1.name="chkbox[]";
+			cell1.appendChild(element1);
+
+			var cell2 = row.insertCell(1);
+			cell2.innerHTML = rowCount + 1;
+
+			var cell3 = row.insertCell(2);
+			var element2 = document.createElement("input");
+			element2.type = "text";
+			element2.name = "txtbox[]";
+			cell3.appendChild(element2);
+
+
+		}
+
+		function deleteRow(tableID) {
+			try {
+			var table = document.getElementById(tableID);
+			var rowCount = table.rows.length;
+
+			for(var i=0; i<rowCount; i++) {
+				var row = table.rows[i];
+				var chkbox = row.cells[0].childNodes[0];
+				if(null != chkbox && true == chkbox.checked) {
+					table.deleteRow(i);
+					rowCount--;
+					i--;
+				}
+
+
+			}
+			}catch(e) {
+				alert(e);
+			}
+		}
+
+	</script>
+
+</head>
+
+<body>
+
+<!--Nav contains collapsible sidebar with hamburger menu, title, and sign out button (if user is signed in)-->
+<nav>
+	<div id="sidebar" class="cSidebar">
+	    <button class="openButton" onclick="openNav()">☰</button>
+		<a href="#">Home</a> 
+		<a href="#">Recipes</a> 
+		<div id="recipeOpt">
+		<a href="#">Add&nbsp;Recipe</a>
+		<a href="#">Favorites</a>
+		<a href="#">Desserts</a>
+		<a href="#">Breakfast</a>
+		<a href="#">Vegan</a>
+		</div>
+		<a href="#">Weekly&nbsp;Plan</a>
+		<a href="#">Grocery&nbsp;List</a>
+		
+	</div>
+	<div id="navbutton">
+		<button class="openButton" onclick="openNav()">☰</button></div>
+	
+        <h2 id="pageTitle1B">CookPal</h2>
+	
+	<div>
+	<button id="navButton">Sign&nbsp;out</button> 
+	</div>
+	
+</nav>
+<main>
+<!--New Grocery list-->
+<!--To implement this I used a simple ordered list that adds a new grocery list item to the end of the list-->
+<!---->
+	<input type="button" value="Add Row" onclick="addRow('dataTable')" />
+
+	<input type="button" value="Delete Row" onclick="deleteRow('dataTable')" />
+
+	<table id="dataTable" width="350px" >
+		<tr>
+			<td><input type="checkbox" name="chk"/></td>
+			<td> 1 </td>
+			<td> <input type="text" /> </td>
+		</tr>
+	</table>
+
+
+<!--Footer, still unsure what to put in-->
+<footer>
+@CookPal 2020
+</footer>
+
+
+
+
+<!--Script used for sidebar-->
+<script>
+function openNav() {
+var e = document.getElementById("sidebar");
+if (e.style.width == '260px')
+{e.style.width = '0px';}
+else
+{e.style.width='260px';}
+}
+function closeNav()
+{document.getElementById("sidebar").style.width="0";}
+
+}
+</script>
+
+</body>
+
+</html>
